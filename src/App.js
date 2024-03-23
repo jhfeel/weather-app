@@ -28,7 +28,11 @@ function App() {
   return (
     <div>
       <div className="container">
-        <WeatherBox weather={weather} />
+        {weather ? (
+          <WeatherBox weather={weather} />
+        ) : (
+          "위치 액세스를 허용해주세요"
+        )}
         <WeatherButton />
       </div>
     </div>
