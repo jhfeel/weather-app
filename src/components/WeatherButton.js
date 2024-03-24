@@ -10,14 +10,14 @@ const WeatherButton = ({
   return (
     <div className="WeatherButton">
       <Button
-        variant={selectedCity === "" ? "light" : "outline-light"}
+        variant={selectedCity === "" ? "dark" : "light"}
         onClick={getCurrentLocation}
       >
         My City
       </Button>
       {cityList.map((item) => (
         <Button
-          variant={selectedCity === item ? "light" : "outline-light"}
+          variant={selectedCity === item ? "dark" : "light"}
           onClick={() => setSelectedCity(item)}
         >
           {item}
